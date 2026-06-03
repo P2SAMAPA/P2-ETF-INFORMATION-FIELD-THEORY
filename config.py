@@ -19,10 +19,15 @@ UNIVERSES = {
     ]
 }
 
-# Macro variables to use (subset of available)
-MACRO_VARS = ["VIX", "DXY", "T10Y2Y", "DGS10"]   # can add more
+# All available macro variables from the dataset
+MACRO_VARS = [
+    "VIX", "DXY", "T10Y2Y", "TBILL_3M",
+    "DGS1MO", "DGS3MO", "DGS6MO", "DGS1", "DGS2", "DGS5", "DGS7",
+    "DGS10", "DGS20", "DGS30"
+]
 
 # Wiener filter parameters
 GRAPH_KNN = 5                # number of neighbors for graph construction
 SIGNAL_NOISE_RATIO = 0.1     # prior signal-to-noise ratio (inverse of noise variance)
+RIDGE_ALPHA = 1.0            # regularisation for macro prior regression
 TOP_N = 3
